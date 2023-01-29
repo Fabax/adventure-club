@@ -1,8 +1,6 @@
 <script>
   // @ts-nocheck
-
   import "normalize.css";
-  import { afterUpdate, onMount } from "svelte";
   import Sketch from "../sketch/sketch.svelte";
   import Nav from "../components/nav.svelte";
   import Header from "../components/header.svelte";
@@ -11,8 +9,6 @@
   let scrollY, pageHeight, contentHeight;
   let scrollNormalized = 0;
   let yearIndex = 0;
-
-  onMount(() => {});
 
   const handleScroll = () => {
     scrollNormalized = scrollY / (contentHeight - pageHeight);
@@ -46,11 +42,9 @@
 
 <Header {yearIndex} />
 <main bind:offsetHeight={contentHeight}>
-  <!-- {#if ready} -->
   <div>
     <Sketch {scrollNormalized} {yearIndex} on:circleClick={handleClickCircle} />
   </div>
-  <!-- {/if} -->
 </main>
 <Nav {yearIndex} />
 
@@ -63,11 +57,6 @@
   * {
     margin: 0;
     padding: 0;
-    font-family: "Courier New";
-  }
-
-  :root {
-    --font-large: 6vw;
   }
 
   main {
