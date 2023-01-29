@@ -10,10 +10,12 @@ export default class Circle {
         this.date = year.date
         this.index = index
         this.noise = noise
-        
-        this.circleInc = 12
+
+        this.maxRadius = this.p5.windowWidth > this.p5.windowHeight ? this.p5.windowHeight * .65 : this.p5.windowWidth * .65;
         this.circleBase = 200        
-        this.radius = this.circleBase + this.index * this.circleInc;
+        this.circleInc = (this.maxRadius - this.circleBase)/83
+        // console.log(this.circleInc)
+        this.radius = this.index * this.circleInc;
 
         this.isTouching = false        
     }
@@ -54,8 +56,9 @@ export default class Circle {
 
     update(scrollNormalized, yearIndex){
         let mouseDist = this.p5.dist(this.position.x, this.position.y, this.p5.mouseX, this.p5.mouseY) * 2;
-        this.circleInc = (-6*scrollNormalized) + 12
-        this.radius = this.circleBase + this.index * this.circleInc;
+        let scaleFactor = this.p5.map(scrollNormalized,0,1,4,1)
+        this.circleInc = ((this.maxRadius )/83) * scaleFactor
+        this.radius = (this.index * this.circleInc) + this.circleBase;
         this.isCurrentYear = yearIndex === this.index
         this.isTouching = mouseDist > this.radius - (this.circleInc/2) && mouseDist < this.radius + (this.circleInc/2) ? true : false;
     }

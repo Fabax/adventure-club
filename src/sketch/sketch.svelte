@@ -29,11 +29,9 @@
     let circlePosition;
 
     p5.setup = () => {
-      p5.createCanvas(p5.displayWidth, p5.displayHeight);
+      p5.createCanvas(p5.windowWidth, p5.windowHeight);
       p5.smooth();
-      circlePosition = p5.createVector(p5.width * 0.5, p5.height * 0.5);
-      circles = setCircles();
-      counter = new Counter(p5, circlePosition, data.birthDate);
+      initSketchProps();
     };
 
     p5.draw = () => {
@@ -66,10 +64,21 @@
       }
     };
 
+    p5.windowResized = () => {
+      p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+      initSketchProps();
+    };
+
     function setCircles() {
       return data.nodeYears.map((year, index) => {
         return new Circle(p5, circlePosition, year, index, sequence[index]);
       });
+    }
+
+    function initSketchProps() {
+      circlePosition = p5.createVector(p5.width * 0.5, p5.height * 0.5);
+      circles = setCircles();
+      counter = new Counter(p5, circlePosition, data.birthDate);
     }
   };
 </script>
