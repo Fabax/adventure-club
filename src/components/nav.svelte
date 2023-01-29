@@ -10,8 +10,8 @@
 
   onMount(() => {
     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-    gsap.set(".year, .description", { opacity: 0 });
-    gsap.set(".description", { opacity: 0, y: -75 });
+    gsap.set("nav .year, nav .description", { opacity: 0 });
+    gsap.set("nav .description", { opacity: 0, y: -75 });
 
     ScrollTrigger.batch(".item", {
       batchMax: 1,

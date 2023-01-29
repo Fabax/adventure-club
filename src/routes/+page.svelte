@@ -44,7 +44,7 @@
   bind:scrollY
 />
 
-<Header {scrollNormalized} />
+<Header {yearIndex} />
 <main bind:offsetHeight={contentHeight}>
   <!-- {#if ready} -->
   <div>

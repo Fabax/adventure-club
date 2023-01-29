@@ -168,7 +168,7 @@
     },
     {
       "date": 1154,      
-      "isMain": false,
+      "isMain": true,
       "description": "Henry Plantagenet, her husband, became King Henry II of England"
     },
     {
@@ -183,7 +183,7 @@
     },
     {
       "date": 1157,      
-      "isMain": false,
+      "isMain": true,
       "description": "Birth of Richard, her second son with Henry II"
     },
     {
@@ -228,7 +228,7 @@
     },
     {
       "date": 1166,      
-      "isMain": false,
+      "isMain": true,
       "description": "Birth of John, her fourth son with Henry II"
     },
     {
@@ -258,13 +258,13 @@
     },
     {
       "date": 1172,
-      "isMain": false,
-      "description": ""
+      "isMain": true,
+      "description": "Help her sons rebell against their father, Henry II"
     },
     {
       "date": 1173,      
       "isMain": false,
-      "description": "Help her sons rebell against their father, Henry II"
+      "description": ""
     },
     {
       "date": 1174,      
@@ -358,7 +358,7 @@
     },
     {
       "date": 1192,      
-      "isMain": false,
+      "isMain": true,
       "description": "Her son, Richard I is captured by Duke Leopold V of Austria."
     },
     {
@@ -419,7 +419,7 @@
     {
       "date": 1204,
       "isMain": true,
-      "description": "death"
+      "description": "Dies at the monastery of Fontevrault"
     }
   ]
 }

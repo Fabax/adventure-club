@@ -1,10 +1,10 @@
 <script>
   // @ts-nocheck
-  import { scale } from "$lib/utils.js";
   import { onMount } from "svelte";
   import gsap from "gsap";
 
-  export let scrollNormalized = 0;
+  export let yearIndex;
+
   let portraitIndex = 1;
   let component = null;
 
@@ -20,7 +20,33 @@
   });
 
   $: {
-    portraitIndex = Math.floor(scale(scrollNormalized, 0, 1, 1, 8));
+    portraitIndex = getPortraitIndex(yearIndex);
+  }
+
+  function getPortraitIndex(yearIndex) {
+    let index = 1;
+    if (yearIndex >= 0 && yearIndex < 8) {
+      index = 1;
+    } else if (yearIndex >= 8 && yearIndex < 15) {
+      index = 4;
+    } else if (yearIndex >= 15 && yearIndex < 25) {
+      index = 2;
+    } else if (yearIndex >= 25 && yearIndex < 30) {
+      index = 3;
+    } else if (yearIndex >= 30 && yearIndex < 38) {
+      index = 6;
+    } else if (yearIndex >= 38 && yearIndex < 45) {
+      index = 2;
+    } else if (yearIndex >= 45 && yearIndex < 52) {
+      index = 5;
+    } else if (yearIndex >= 52 && yearIndex < 67) {
+      index = 4;
+    } else if (yearIndex >= 67 && yearIndex < 78) {
+      index = 6;
+    } else {
+      index = 7;
+    }
+    return index;
   }
 </script>
 
@@ -45,13 +71,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    // border: 1px solid white;
     z-index: 2;
     color: white;
     font-family: "Source Code Pro";
     display: flex;
     flex-direction: row;
-    // transform: translateY(-100);
   }
 
   .frame {
