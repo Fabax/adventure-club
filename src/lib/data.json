@@ -1,0 +1,425 @@
+{
+  "name": "Aliénor",
+  "lastName": "d'Aquitaine",
+  "birthDate": "1122",
+  "died": "April 1, 1204",
+  "age": 82,
+  "birthYear": 1122,
+  "nodeYears": [
+    {
+      "date": 1122,      
+      "isMain": true,
+      "description": "Birth"
+    },
+    {
+      "date": 1123,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1124,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1125,      
+      "isMain": false,
+      "description": "Birth of her sister, Petronilla"
+    },
+    {
+      "date": 1126,      
+      "isMain": false,
+      "description": "Birth of her brother, William"
+    },
+    {
+      "date": 1127,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1128,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1129,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1130,      
+      "isMain": true,
+      "description": "Death of her mother and brother"
+    },
+    {
+      "date": 1131,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1132,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1133,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1134,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1135,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1136,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1137,      
+      "isMain": true,
+      "description": "Becomes Duchess of Aquitaine & Queen of the Franks"
+    },
+    {
+      "date": 1138,      
+      "isMain": false,
+      "description": "Is heavily criticized for her openness and encouragement of the arts and music"
+    },
+    {
+      "date": 1139,      
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1140,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1141,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1142,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1143,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1144,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1145,      
+      "isMain": false,
+      "description": "Birth of Marie, her first daugther with Louis VII"
+    },
+    {
+      "date": 1146,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1147,      
+      "isMain": true,
+      "description": "Takes part her in the Second Crusade with her husband Louis VII"
+    },
+    {
+      "date": 1148,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1149,      
+      "isMain": true,
+      "description": "Escape an attack from a Byzantine ships when sailing back to France"
+    },
+    {
+      "date": 1150,      
+      "isMain": false,
+      "description": "Birth of Alix, her second daugther with Louis VII"
+    },
+    {
+      "date": 1151,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1152,      
+      "isMain": true,
+      "description": "Her marriageto Louis VII is annulled and she marries Henry Plantagenet"
+    },
+    {
+      "date": 1153,      
+      "isMain": false,
+      "description": "Birth of William, her first son with Henry Plantagenet"
+    },
+    {
+      "date": 1154,      
+      "isMain": false,
+      "description": "Henry Plantagenet, her husband, became King Henry II of England"
+    },
+    {
+      "date": 1155,      
+      "isMain": false,
+      "description": "Birth of Henry, her second son with Henry II"
+    },
+    {
+      "date": 1156,      
+      "isMain": false,
+      "description": "Birth of Matilda, her first daugther with Henry II"
+    },
+    {
+      "date": 1157,      
+      "isMain": false,
+      "description": "Birth of Richard, her second son with Henry II"
+    },
+    {
+      "date": 1158,      
+      "isMain": false,
+      "description": "Birth of Geoffrey, her third son with Henry II"
+    },
+    {
+      "date": 1159,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1160,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1161,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1162,      
+      "isMain": false,
+      "description": "Birth of Eleanor, her second daugther with Henry II"
+    },
+    {
+      "date": 1163,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1164,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1165,      
+      "isMain": false,
+      "description": "Birth of Joan, her third daugther with Henry II"
+    },
+    {
+      "date": 1166,      
+      "isMain": false,
+      "description": "Birth of John, her fourth son with Henry II"
+    },
+    {
+      "date": 1167,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1168,      
+      "isMain": true,
+      "description": "Eleanor returns in France and lead a seperate life with Henry II"
+    },
+    {
+      "date": 1169,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1170,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1171,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1172,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1173,      
+      "isMain": false,
+      "description": "Help her sons rebell against their father, Henry II"
+    },
+    {
+      "date": 1174,      
+      "isMain": true,
+      "description": "Held prisoner by her husband Henry II, during a trip to Southampton"
+    },
+    {
+      "date": 1175,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1176,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1177,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1178,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1179,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1180,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1181,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1182,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1183,      
+      "isMain": false,
+      "description": "Death of her son Henry ( The young king)"
+    },
+    {
+      "date": 1184,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1185,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1186,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1187,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1188,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1189,      
+      "isMain": true,
+      "description": "Released from imprisonment after Henry II death. Rule England as regent"
+    },
+    {
+      "date": 1190,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1191,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1192,      
+      "isMain": false,
+      "description": "Her son, Richard I is captured by Duke Leopold V of Austria."
+    },
+    {
+      "date": 1193,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1194,      
+      "isMain": true,
+      "description": "Pays the ransom of 150,000 marks for the release of her son Richard I"
+    },
+    {
+      "date": 1195,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1196,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1197,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1198,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1199,      
+      "isMain": false,
+      "description": "Death of her son, Richard I. Her youngest son, John, becomes King of England "
+    },
+    {
+      "date": 1200,      
+      "isMain": true,
+      "description": "Help arranging a peace treaty between England and France"
+    },
+    {
+      "date": 1201,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1202,
+      "isMain": false,
+      "description": ""
+    },
+    {
+      "date": 1203,      
+      "isMain": false,
+      "description": "Retreats to the monastery of Fontevrault after the campaign at Mirebeau"
+    },
+    {
+      "date": 1204,
+      "isMain": true,
+      "description": "death"
+    }
+  ]
+}
