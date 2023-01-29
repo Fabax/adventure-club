@@ -6,6 +6,7 @@
   export let yearIndex;
 
   let portraitIndex = 1;
+  let description = "Born ready";
   let component = null;
 
   onMount(() => {
@@ -21,6 +22,7 @@
 
   $: {
     portraitIndex = getPortraitIndex(yearIndex);
+    description = getDescription(yearIndex);
   }
 
   function getPortraitIndex(yearIndex) {
@@ -48,6 +50,32 @@
     }
     return index;
   }
+
+  function getDescription(yearIndex) {
+    let text = "Born ready";
+    if (yearIndex >= 0 && yearIndex < 8) {
+      text = "Born ready";
+    } else if (yearIndex >= 8 && yearIndex < 15) {
+      text = "Born ready";
+    } else if (yearIndex >= 15 && yearIndex < 25) {
+      text = "Forbes 30 under 30";
+    } else if (yearIndex >= 25 && yearIndex < 30) {
+      text = "Hot shot";
+    } else if (yearIndex >= 30 && yearIndex < 38) {
+      text = "Expat life";
+    } else if (yearIndex >= 38 && yearIndex < 45) {
+      text = "Geordie Shore";
+    } else if (yearIndex >= 45 && yearIndex < 52) {
+      text = "Brexit";
+    } else if (yearIndex >= 52 && yearIndex < 67) {
+      text = "The longest yard";
+    } else if (yearIndex >= 67 && yearIndex < 78) {
+      text = "Prison break";
+    } else {
+      text = "Nobel Prize";
+    }
+    return text;
+  }
 </script>
 
 <header bind:this={component}>
@@ -56,7 +84,7 @@
   </div>
   <div class="side side-left">
     <h1>Aleniore <span /> d'aquitaine</h1>
-    <div class="description">"Born ready"</div>
+    <div class="description">{description}</div>
   </div>
 </header>
 
@@ -104,6 +132,11 @@
     &-left {
       width: 75%;
     }
+  }
+
+  .description {
+    font-size: 1.25rem;
+    color: #ffd60a;
   }
 
   .sprite {
