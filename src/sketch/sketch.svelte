@@ -33,11 +33,13 @@
       p5.smooth();
       circlePosition = p5.createVector(p5.width * 0.5, p5.height * 0.5);
       circles = setCircles();
-      counter = new Counter(p5, circlePosition, 1122);
+      counter = new Counter(p5, circlePosition, data.birthDate);
     };
 
     p5.draw = () => {
       p5.background("black");
+
+      let { date, isMain } = data.nodeYears[yearIndex];
 
       circles.forEach((circle) => {
         circle.update(scrollNormalized, yearIndex);
@@ -47,12 +49,21 @@
         }
       });
 
-      counter.update(data.nodeYears[yearIndex].date);
+      counter.update(date, isMain);
       counter.show();
+
+      if (data.nodeYears[desiredCircle].isMain) {
+        p5.cursor(p5.HAND);
+      } else {
+        p5.cursor(p5.ARROW);
+      }
     };
 
     p5.mouseClicked = () => {
-      dispatchClick(desiredCircle);
+      if (data.nodeYears[desiredCircle].isMain) {
+        let dispatchedIndex = desiredCircle;
+        dispatchClick(dispatchedIndex);
+      }
     };
 
     function setCircles() {

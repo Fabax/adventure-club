@@ -14,15 +14,17 @@
 
   const handleScroll = (evt) => {
     scrollNormalized = scrollY / (contentHeight - pageHeight);
-    yearIndex = Math.floor(scale(scrollNormalized, 0, 1, 0, 83));
+    let scrollIndex = Math.floor(scale(scrollNormalized, 0, 1, 0, 84));
+    yearIndex = scrollIndex <= 82 ? scrollIndex : 82;
   };
 
   const handleResize = () => {};
 
   const handleClickCircle = ({ detail }) => {
-    console.log(detail);
+    let scrollTop = (contentHeight / 100) * detail.circle;
+    console.log("scrollTop", scrollTop);
     window.scrollTo({
-      top: (contentHeight / 100) * detail.circle,
+      top: scrollTop,
       behavior: "smooth",
     });
   };

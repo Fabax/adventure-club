@@ -146,10 +146,10 @@
   .current {
     .description,
     .year {
-      color: yellow;
+      color: #ffd60a;
     }
     .line {
-      border: 1px solid yellow;
+      border: 1px solid #ffd60a;
     }
   }
 
