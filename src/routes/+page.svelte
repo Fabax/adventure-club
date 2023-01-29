@@ -12,19 +12,17 @@
   let scrollNormalized = 0;
   let yearIndex = 0;
 
-  const handleScroll = (evt) => {
+  onMount(() => {});
+
+  const handleScroll = () => {
     scrollNormalized = scrollY / (contentHeight - pageHeight);
     let scrollIndex = Math.floor(scale(scrollNormalized, 0, 1, 0, 84));
     yearIndex = scrollIndex <= 82 ? scrollIndex : 82;
   };
 
-  const handleResize = () => {};
-
   const handleClickCircle = ({ detail }) => {
-    let scrollTop = (contentHeight / 100) * detail.circle;
-    console.log("scrollTop", scrollTop);
     window.scrollTo({
-      top: scrollTop,
+      top: (contentHeight / 100) * detail.circle,
       behavior: "smooth",
     });
   };
@@ -42,7 +40,6 @@
 
 <svelte:window
   on:scroll={handleScroll}
-  on:resize={handleResize}
   bind:innerHeight={pageHeight}
   bind:scrollY
 />
@@ -84,14 +81,9 @@
       display: flex;
       width: 100%;
       height: 100vh;
-      // padding: 1rem 0;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      // h1 {
-      //   font-size: var(--font-large);
-      // }
     }
   }
 </style>

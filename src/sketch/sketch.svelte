@@ -25,13 +25,13 @@
   const sketch = (p5) => {
     let desiredCircle = 0;
     let circles = [];
-    let counter = null;
-    let circlePosition;
+    let counter, circlePosition;
 
     p5.setup = () => {
       p5.createCanvas(p5.windowWidth, p5.windowHeight);
       p5.smooth();
       initSketchProps();
+      p5.frameRate(30);
     };
 
     p5.draw = () => {

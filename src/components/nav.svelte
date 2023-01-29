@@ -6,20 +6,17 @@
 
   import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
   export let yearIndex;
+  let component = null;
 
   onMount(() => {
     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-    // gsap.registerPlugin();
-
     gsap.set(".year, .description", { opacity: 0 });
     gsap.set(".description", { opacity: 0, y: -75 });
 
     ScrollTrigger.batch(".item", {
-      //   interval: 0.1, // time window (in seconds) for batching to occur.
-      batchMax: 1, // maximum batch size (targets)
+      batchMax: 1,
       start: "top center+=250",
       end: "top center-=250",
-      //   scrub: 1,
       onEnter: (batch) => {
         batch.forEach((year) => {
           gsap.to(year.children[1], {
@@ -71,11 +68,19 @@
         });
       },
     });
-    // gsap.to(window, { duration: 2, scrollTo: ".item-45" });
+
+    gsap.set(component, { xPercent: 30, opacity: 0 });
+    gsap.to(component, {
+      xPercent: 0,
+      opacity: 1,
+      delay: 0.75,
+      duration: 0.95,
+      ease: "out",
+    });
   });
 </script>
 
-<nav>
+<nav bind:this={component}>
   <div class="pusher" />
   {#each data.nodeYears as year, i}
     <div
@@ -99,7 +104,6 @@
     right: 0;
     width: 20vw;
     height: 600vh;
-    // background-color: black;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -110,12 +114,11 @@
     width: 100%;
     color: white;
     height: 1%;
-    // border: 1px solid white;
     position: relative;
   }
 
   .pusher {
-    height: 9%;
+    height: 8.5%;
   }
 
   .line {
@@ -140,7 +143,6 @@
     padding: 0 2rem 2rem 0rem;
     font-weight: bold;
     font-weight: 500;
-    // opacity: 0;
   }
 
   .current {

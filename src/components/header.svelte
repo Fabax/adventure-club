@@ -1,15 +1,30 @@
 <script>
   // @ts-nocheck
   import { scale } from "$lib/utils.js";
+  import { onMount } from "svelte";
+  import gsap from "gsap";
+
   export let scrollNormalized = 0;
   let portraitIndex = 1;
+  let component = null;
+
+  onMount(() => {
+    gsap.set(component, { yPercent: -100, opacity: 0 });
+    gsap.to(component, {
+      yPercent: 0,
+      opacity: 1,
+      delay: 0.75,
+      duration: 0.95,
+      ease: "out",
+    });
+  });
 
   $: {
     portraitIndex = Math.floor(scale(scrollNormalized, 0, 1, 1, 8));
   }
 </script>
 
-<header>
+<header bind:this={component}>
   <div class="side  side-right">
     <div class="sprite portrait-{portraitIndex}" />
   </div>
@@ -36,6 +51,7 @@
     font-family: "Source Code Pro";
     display: flex;
     flex-direction: row;
+    // transform: translateY(-100);
   }
 
   .frame {
