@@ -1,14 +1,11 @@
 <script>
   // @ts-nocheck
-  export let scroll = 0;
+  import { scale } from "$lib/utils.js";
+  export let scrollNormalized = 0;
   let portraitIndex = 1;
 
   $: {
-    portraitIndex = Math.floor(scale(scroll, 0, 1, 1, 8));
-  }
-
-  function scale(number, inMin, inMax, outMin, outMax) {
-    return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
+    portraitIndex = Math.floor(scale(scrollNormalized, 0, 1, 1, 8));
   }
 </script>
 
@@ -18,7 +15,7 @@
   </div>
   <div class="side side-left">
     <h1>Aleniore <span /> d'aquitaine</h1>
-    <div class="description">Born ready</div>
+    <div class="description">"Born ready"</div>
   </div>
 </header>
 

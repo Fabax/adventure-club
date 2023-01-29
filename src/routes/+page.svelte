@@ -3,19 +3,18 @@
 
   import "normalize.css";
   import { afterUpdate, onMount } from "svelte";
-  import Circles from "../components/circles.svelte";
+  import Sketch from "../sketch/sketch.svelte";
   import Nav from "../components/nav.svelte";
   import Header from "../components/header.svelte";
+  import { scale } from "$lib/utils.js";
 
-  let scrollY;
-  let pageHeight;
-  let contentHeight;
+  let scrollY, pageHeight, contentHeight;
   let scrollNormalized = 0;
-  let scrollIndex = 0;
+  let yearIndex = 0;
 
   const handleScroll = (evt) => {
     scrollNormalized = scrollY / (contentHeight - pageHeight);
-    scrollIndex = Math.floor(scale(scrollNormalized, 0, 1, 0, 83));
+    yearIndex = Math.floor(scale(scrollNormalized, 0, 1, 0, 83));
   };
 
   const handleResize = () => {};
@@ -27,10 +26,6 @@
       behavior: "smooth",
     });
   };
-
-  function scale(number, inMin, inMax, outMin, outMax) {
-    return ((number - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
-  }
 </script>
 
 <svelte:head>
@@ -50,19 +45,15 @@
   bind:scrollY
 />
 
-<Header scroll={scrollNormalized} />
+<Header {scrollNormalized} />
 <main bind:offsetHeight={contentHeight}>
   <!-- {#if ready} -->
   <div>
-    <Circles
-      scroll={scrollNormalized}
-      yearIndex={scrollIndex}
-      on:circleClick={handleClickCircle}
-    />
+    <Sketch {scrollNormalized} {yearIndex} on:circleClick={handleClickCircle} />
   </div>
   <!-- {/if} -->
 </main>
-<Nav yearIndex={scrollIndex} />
+<Nav {yearIndex} />
 
 <!-- <canvas bind:this={canvas} /> -->
 <style lang="scss">
